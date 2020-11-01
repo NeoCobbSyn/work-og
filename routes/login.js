@@ -10,6 +10,9 @@ router.post('/login', async (req, res) => {
     console.log(err)
     res.json(err)
   })
-
 })
+  router.get('/test', (req, res) => {
+    console.log("Testing is successful");
+    return res.json({'key': 10})
+  })
 module.exports = router;

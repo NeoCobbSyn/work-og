@@ -14,7 +14,7 @@ var mail = require('./routes/email');
 var google = require('./routes/google');
 var app = express();
 
-// app.use(cors({ origin: '*' }));
+//app.use(cors({ origin: '*' }));
 app.use(
   cors({
     origin: "http://localhost:3001",
@@ -22,18 +22,35 @@ app.use(
   })
 );
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
-// mongoose.connect('mongodb://localhost/craftzy');
+// // mongoose.connect('mongodb://localhost/craftzy');
   
-mongoose.connect('mongodb+srv://craftzy:'+  encodeURIComponent("100%A10dence") + '@craftzy-dev-cuksf.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb+srv://craftzy:'+  encodeURIComponent("100%A10dence") + '@craftzy-dev-cuksf.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
-var db = mongoose.connection;
-db.on('error', function (err) {
-    console.log(err)
+// var db = mongoose.connection;
+// db.on('error', function (err) {
+//     console.log(err)
+// });
+// db.once('open', function () {
+//     console.log('mongodb connected!!')
+// });
+
+
+var mysql= require('mysql');
+var connection = mysql.createConnection({
+  host     : '152.67.10.95',
+  user     : 'paw',
+  password : 'Paw@2020'
 });
-db.once('open', function () {
-    console.log('mongodb connected!!')
+ 
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+ 
+  console.log('connected as id ' + connection.threadId);
 });
 
 // view engine setup
