@@ -7,7 +7,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser')
 var passport = require("passport");
 
-var register = require('./routes/register');
+//var register = require('./routes/register');
 var login = require('./routes/login');
 var jwt = require('./routes/jwt-verify');
 var mail = require('./routes/email');
@@ -65,7 +65,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 
-app.use('/api/register', register);
+//app.use('/api/register', register);
 app.use('/api/user', login);
 app.use('/api/verify', jwt);
 app.use('/api/send', mail);
