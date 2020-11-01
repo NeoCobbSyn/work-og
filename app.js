@@ -9,9 +9,9 @@ var passport = require("passport");
 
 //var register = require('./routes/register');
 var login = require('./routes/login');
-var jwt = require('./routes/jwt-verify');
-var mail = require('./routes/email');
-var google = require('./routes/google');
+// var jwt = require('./routes/jwt-verify');
+// var mail = require('./routes/email');
+// var google = require('./routes/google');
 var app = express();
 
 //app.use(cors({ origin: '*' }));
@@ -67,9 +67,9 @@ app.use(passport.initialize());
 
 //app.use('/api/register', register);
 app.use('/api/user', login);
-app.use('/api/verify', jwt);
-app.use('/api/send', mail);
-app.use('/api/google', google);
+// app.use('/api/verify', jwt);
+// app.use('/api/send', mail);
+// app.use('/api/google', google);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

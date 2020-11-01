@@ -1,6 +1,6 @@
-var loginRepo = require('../repository/login-repo')
-//var bcrypt = require('bcrypt');
-var jwt = require('jsonwebtoken');
+// var loginRepo = require('../repository/login-repo')
+// var bcrypt = require('bcrypt');
+// var jwt = require('jsonwebtoken');
 
 // process.env.SECRET_KEY = 'secret'
 

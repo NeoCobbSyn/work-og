@@ -1,4 +1,4 @@
-var registerRepo = require('../repository/register-repo')
+//var registerRepo = require('../repository/register-repo')
 // var bcrypt = require('bcrypt');
 
 // var registerService = () => {
