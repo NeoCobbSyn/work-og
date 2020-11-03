@@ -39,7 +39,7 @@ app.use(
 
 var mysql= require('mysql');
 var connection = mysql.createConnection({
-  host     : '152.67.10.95',
+  host     : '52.251.53.255',
   user     : 'paw',
   password : 'Paw@2020'
 });
